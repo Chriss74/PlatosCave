@@ -252,7 +252,9 @@
 
         // presplash
         presplash = undefined;
-        if (FS.readdir('/').indexOf('web-presplash.png') >= 0) {
+	if (FS.readdir('/').indexOf('ignorance.png') >= 0) {
+          presplash = FS.readFile('/ignorance.png');      
+        else if (FS.readdir('/').indexOf('web-presplash.png') >= 0) {
           presplash = FS.readFile('/web-presplash.png');
         } else if (FS.readdir('/').indexOf('web-presplash.jpg') >= 0) {
           presplash = FS.readFile('/web-presplash.jpg');
